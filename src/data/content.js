@@ -171,7 +171,7 @@ export const caseStudyStories = [
       'Trend views over weeks, not just the selected dates',
       'Self-service views so employees can see their own time',
     ],
-    tech: ['Google Apps Script', 'HTML/CSS/JS', 'Charts', 'Role-based access'],
+    tech: ['Python/C#/VBScript', 'Google Apps Script', 'SQLITE', 'Role-based access','HTML/CSS/JS',],
   },
   {
     slug: 'clawcash',
