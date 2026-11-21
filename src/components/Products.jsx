@@ -112,8 +112,23 @@ export default function Products() {
           {columns.map((col, c) => (
             <div key={c} className="pcol flex flex-col gap-4 sm:gap-5" style={{ '--k': `${k[c]}px` }}>
               {col.map(({ p, i }) => (
-                <Pin key={p.slug} pin={p} i={i} onOpen={setOpenPin} />
-              ))}
+  <div key={p.slug} className="flex flex-col gap-4 sm:gap-5">
+    <Pin pin={p} i={i} onOpen={setOpenPin} />
+
+    {p.slug === 'auth-flow' && (
+      <Pin
+        pin={{
+          slug: 'new-project-image',
+          title: 'Local Marketplace',
+          color: 'C9DDE0',
+          h: 460,
+        }}
+        i={10}
+        onOpen={setOpenPin}
+      />
+    )}
+  </div>
+))}
             </div>
           ))}
         </div>
